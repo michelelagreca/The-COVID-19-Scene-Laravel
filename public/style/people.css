@@ -1,0 +1,71 @@
+#people{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(black, black), url("/The Covid-19 Scene/images/people.jpeg");
+    background-blend-mode: saturation;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.form_cont_people{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+h3 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+input[type=text] {
+    width: 100%;
+}
+input[type=submit] {
+    width: 100%;
+    margin: 5px;
+    text-align: left;
+}
+#result_query{
+    z-index: 1;
+}
+
+tr{
+    margin: 10px;
+    background-color: black;
+    font-size: 14;
+    font-family: 'Open Sans';
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+th, td{
+    min-width: 70px;
+}
+.first{
+    color: var(--orange);
+    text-transform: uppercase;
+}
+@media (max-width: 700px) {
+    .form_cont_people{
+        width: 100%;
+    }
+    #result_query{
+        width: 90vw;
+        overflow: scroll;
+    }
+}
+.showing{
+    display:block;
+}

@@ -1,0 +1,88 @@
+#services{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(black, black), url("/The Covid-19 Scene/images/nurse5.jpg");
+    background-blend-mode: saturation;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.form_cont{
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: 1;
+}
+select {
+    width: 40%;
+    height: 50px;
+    margin: 5px;
+    font-size: 14;
+    outline: 0;
+    border: 0 !important;
+    font-family: 'Open Sans';
+    letter-spacing: 3px;
+    color: rgb(122, 122, 122);
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: black;
+}
+select option {
+    background-color: var(--dark_gray);
+}
+input[type=date] {
+    width: 40%;
+    height: 50px;
+    margin: 5px;
+    font-size: 14;
+    font-family: 'Open Sans';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: black;
+    color: rgb(122, 122, 122);
+    outline: 0;
+    border: 0 !important;
+}
+.form_cont form input[type=submit] {
+    width: 40%;
+    text-align: left;    
+}
+.errore_ins{
+    display: block;
+    font-size: 15;
+    color: red;
+    z-index: 1;
+    font-weight: bold;
+    width: 100%;
+}
+.ok{
+    display: block;
+    font-size: 15;
+    color: green;
+    z-index: 1;
+    font-weight: bold;
+    width: 100%;
+}
+@media (max-width: 700px) {
+    #services{
+        flex-direction: column;
+    }
+    .form_cont{
+        width: 80vw;
+        align-items: center;
+    }
+    input[type=date] {
+        width: 100%;
+    }
+    select{
+        width: 100%;
+    }
+}

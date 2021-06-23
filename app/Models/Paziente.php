@@ -11,7 +11,7 @@ class Paziente extends Model
     protected $autoIncrement = false;
     // public $incrementing = false;
     protected $keyType = "integer";
-    protected $timestamps = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'CF',

@@ -11,7 +11,7 @@ class Operatore extends Model
     protected $autoIncrement = false;
     // public $incrementing = false;
     protected $keyType = "integer";
-    protected $timestamps = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'CF',
@@ -21,10 +21,10 @@ class Operatore extends Model
 
     ];
     public function persona(){
-        return $this->belongsTo("Persona", "CF", "CF");
+        return $this->belongsTo("App\Models\Persona", "CF", "CF");
     }
     public function staff(){
-        return $this->hasOne("Staff", "code", "username");
+        return $this->hasOne("App\Models\Staff", "code", "username");
     }
 }
 

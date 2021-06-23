@@ -23,10 +23,23 @@ Route::get('/news', function () {
 })->name('news');
 
 Route::get('/people', function () {
-    
+
 })->name('people');
 
-Route::get('/access', 'AccessController@access')->name('access');
+Route::get('/access', 'LoginController@login')->name('access');
+Route::post('/login', 'LoginController@checkLogin')->name('login');
+Route::post('/signin', 'RegisterController@signin')->name('signin');
+
+Route::get('/logout', 'LoginController@logout')->name('logout');
+
+Route::get('/services', function () {
+    return view('services');
+})->name('services');
+
+
+
+
+
 
 Route::get('/about', function () {
     return view('about');

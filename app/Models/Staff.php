@@ -10,7 +10,7 @@ class Staff extends Model
     protected $primaryKey = "username";
     protected $autoIncrement = false;
     protected $keyType = "string";
-    protected $timestamps = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'code',
@@ -23,7 +23,7 @@ class Staff extends Model
         'password'
     ];
     public function operatore(){
-        return $this->belongsTo("Operatore", "code", "matricola");
+        return $this->belongsTo("App\Models\Operatore", "code", "matricola");
     }
 }
 

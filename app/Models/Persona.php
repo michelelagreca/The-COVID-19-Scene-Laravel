@@ -11,7 +11,7 @@ class Persona extends Model
     protected $autoIncrement = true;
     // public $incrementing = true;
     protected $keyType = "integer";
-    protected $timestamps = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'CF',

@@ -20,9 +20,10 @@
                     Log in
                 </h3>
                 <div class="overlay"></div>
+                <div id="errore_log">{{Session::get('errore')}}</div>
                 <form name="form_login" method='POST' action="{{ route('login') }}">
                     @csrf
-                    <input type='text' placeholder='Username' name='username'>
+                    <input type='text' placeholder='Username' name='username' value='{{ old("username") }}'>
                     <input type='password' placeholder='Password' name='password'>
                     <input type="submit" name='sub' value='Log In'>
                 </form>

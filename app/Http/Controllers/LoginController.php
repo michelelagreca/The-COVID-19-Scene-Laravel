@@ -23,7 +23,7 @@
                 return view('services', ['u' => $username]);
             }
             else{
-                return redirect('access')->withInput();
+                return redirect('access')->withInput()->with('errore', 'Credentials are not correct');
             }
         }
         public function logout(){

@@ -107,7 +107,7 @@ nav {
 }
 header {
     height: 100vh;
-    background-image: url("/The Covid-19 Scene/images/nurse1.jpg");
+    background-image: url("/images/nurse1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -120,7 +120,7 @@ header #logo_img {
     width: 50%;
     height: 350px;
     z-index: 0;
-    background-image: url("/The Covid-19 Scene/images/logo2.png");
+    background-image: url("/images/logo2.png");
     background-size: auto 100%;
     background-repeat: no-repeat;
     position: relative;
@@ -159,7 +159,7 @@ header div.descriptions {
     100%  {background-color:rgba(0, 0, 0, 0)}
 }
 #news {
-    background-image: linear-gradient(black, black), url("/The Covid-19 Scene/images/c2.jpg");
+    background-image: linear-gradient(black, black), url("/images/c2.jpg");
     background-blend-mode: saturation;
     background-size: cover;
     background-position: center;
@@ -236,7 +236,7 @@ article {
     position: relative; /* for the h2 */
 }
 #tweets {
-    background-image: linear-gradient(black, black), url("/The Covid-19 Scene/images/nurse2.jpg");
+    background-image: linear-gradient(black, black), url("/images/nurse2.jpg");
     background-blend-mode: saturation;
     background-size: cover;
     background-position: center;

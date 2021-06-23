@@ -13,6 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');;
+})->name('home');
+
+Route::get('/news', function () {
+    return view('news');
+})->name('news');
+
+Route::get('/people', function () {
+    
+})->name('people');
+
+Route::get('/access', 'AccessController@access')->name('access');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::get('/terms', function () {
+    return view('terms');
+})->name('terms');

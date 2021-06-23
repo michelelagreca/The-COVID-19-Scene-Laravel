@@ -105,7 +105,7 @@ function onClick(event){
     container.removeEventListener('click', onClick);
 }
 console.log("start");
-fetch("http://localhost/The Covid-19 Scene/phps/news_api.php").then(onResponse).then(onJson);
-fetch("http://localhost/The Covid-19 Scene/phps/twitter_api.php").then(onResponse_tw).then(onJson_tw);
+//fetch("http://localhost/The Covid-19 Scene/phps/news_api.php").then(onResponse).then(onJson);
+//fetch("http://localhost/The Covid-19 Scene/phps/twitter_api.php").then(onResponse_tw).then(onJson_tw);
 const container = document.querySelector('#container_lines');
 container.addEventListener('click', onClick);

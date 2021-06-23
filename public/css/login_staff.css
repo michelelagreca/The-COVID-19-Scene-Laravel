@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-image: linear-gradient(black, black), url("/The Covid-19 Scene/images/nurse4.jpg");
+    background-image: linear-gradient(black, black), url("/images/nurse4.jpg");
     background-blend-mode: saturation;
     background-size: cover;
     background-position: center;

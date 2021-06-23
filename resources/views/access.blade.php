@@ -30,10 +30,12 @@
                 <h3>
                     or Sign Up.
                 </h3>
+                <div id="errore_log">{{Session::get('errore2')}}</div>
+                <div class='no_errore'>{{Session::get('confirm')}}</div>
                 <form name="form_signin" method='POST' action="{{ route('signin') }}">
                     @csrf
-                    <input type='text' placeholder='Institutional Code' name='code'>
-                    <input type='text' placeholder='Username' name='username'>
+                    <input type='text' placeholder='Institutional Code' name='code' value='{{ old("code") }}'>
+                    <input type='text' placeholder='Username' name='username2' value='{{ old("username2") }}'>
                     <input type='password' placeholder='Password' name='password'>
                     <input type="submit" name='sub' value='Sign In'>
                 </form>

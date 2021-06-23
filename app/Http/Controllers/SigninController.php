@@ -6,26 +6,30 @@
     class SigninController extends Controller{
         public function signin(){
             $request = request();
-            return Staff::create([
-                'code' => $request->code,
-                'username' => $request->username,
-                'password' => Hash::make($request->password)
-            ]);
-            
-        }
-
-        public function checkUsername($query){
-            $exists = Staff::where('username', $query)->exists();
-            return ['exists' => $exists];
-        }
-
-        public function checkCode($query){
-            $exists = Operatore::where('Matricola', $query)->exists();
-            return ['exists' => $exists];
-        }
-        
-        public function index(){
-            return view('access');
+            $operatore = Operatore::where('Matricola', $request->code)->first();
+            if(isset($operatore)){
+                $staff_code = Staff::where('code', $request->code)->first();
+                if(!isset($staff_code)){
+                    $staff = Staff::where('username', $request->username2)->first();
+                    if(!isset($staff)){
+                        Staff::create([
+                            'code' => $request->code,
+                            'username' => $request->username2,
+                            'password' => $request->password
+                        ]);
+                        return redirect('access')->with('confirm', 'Staff registered');
+                    }
+                    else{
+                        return redirect('access')->withInput()->with('errore2', 'Username already registered');
+                    }
+                }
+                else{
+                    return redirect('access')->withInput()->with('errore2', 'The code is already registered');
+                }
+            }
+            else{
+                return redirect('access')->withInput()->with('errore2', 'The code does not exist in the database');
+            }
         }
     }
 ?>

@@ -28,7 +28,7 @@ Route::get('/people', function () {
 
 Route::get('/access', 'LoginController@login')->name('access');
 Route::post('/login', 'LoginController@checkLogin')->name('login');
-Route::post('/signin', 'RegisterController@signin')->name('signin');
+Route::post('/signin', 'SigninController@signin')->name('signin');
 
 Route::get('/logout', 'LoginController@logout')->name('logout');
 

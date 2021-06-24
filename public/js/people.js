@@ -91,9 +91,14 @@ function validation(event) {
             Surname:info.surname.value,
             Sub:s.value
         };
-        fetch("/The Covid-19 Scene/phps/check_person.php",{
+        fetch("/people/info",{
             method: 'POST',
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json',
+                // "X-CSRF-Token": csrfToken,
+                'Accept': 'application/json'
+            }
         })
         .then(onResponse).then(onJson_check);
     }

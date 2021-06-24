@@ -28,8 +28,10 @@ Route::get('/news', function () {
 Route::post('/news/getNews', 'NewsController@getNews')->name('getNews');
 
 Route::get('/people', function () {
-
+    return view('people');
 })->name('people');
+
+Route::post('/people/info', 'PeopleController@getInfo')->name('getInfo');
 
 Route::get('/access', 'LoginController@login')->name('access');
 Route::post('/login', 'LoginController@checkLogin')->name('login');

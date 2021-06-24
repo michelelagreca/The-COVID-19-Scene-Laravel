@@ -161,5 +161,7 @@ input[type=submit]:hover {
 }
 h3{
     z-index: 1;
+    padding: 0 10vw;
+    text-align: center;
     
 }

@@ -66,9 +66,14 @@ function validation (event) {
         const data = 
         {    Country:form.country.value
         };
-        fetch("/The Covid-19 Scene/phps/get_news.php",{
+        fetch("/news/getNews",{
             method: 'POST',
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json',
+                // "X-CSRF-Token": csrfToken,
+                'Accept': 'application/json'
+            }
         })
         .then(onResponse).then(onJson);
     }

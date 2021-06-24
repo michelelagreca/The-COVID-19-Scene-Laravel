@@ -3,10 +3,6 @@
 
 @section('titolo', 'The Covid-19 Scene')
 
-@section('script')
-    <script type="module" src="{{ asset('js/home.js') }}" defer></script>
-@stop
-
 @section('corpo')
             <header>
                 <div class="overlay"></div>

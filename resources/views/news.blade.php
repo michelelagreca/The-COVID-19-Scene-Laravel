@@ -7,14 +7,14 @@
 @endsection
 
 @section('script')
-    <script type="module" src="{{ asset('js/home.js') }}" defer></script>
     <script type="module" src="{{ asset('js/news.js') }}" defer></script>
 @endsection
 
 @section('corpo')
             <section id='form_news'>
                 <div class="overlay"></div>
-                <!-- <form name="form_country">
+                <form name="form_country">
+                    @csrf
                     <select name="country">
                         <option selected disabled value="">Choose the country </option>
                         <option value="ae">United Arab Emirates</option>
@@ -73,7 +73,7 @@
                         <option value="za">South Africa</option>
                     </select>
                     <input type="submit">
-                </form> -->
+                </form>
                 <div id='result_news' class='hidden'>
 
                 </div>

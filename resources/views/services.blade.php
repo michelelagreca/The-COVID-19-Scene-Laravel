@@ -8,7 +8,6 @@
 @endsection
 
 @section('script')
-    <script type="module" src="{{ asset('js/home.js') }}" defer></script>
     <script type="module" src="{{ asset('js/services.js') }}" defer></script>
 @endsection
 

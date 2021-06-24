@@ -27,3 +27,10 @@ p{
 h2, h3, ul{
     z-index: 1;
 }
+@media (max-width: 700px) {
+    p{
+        width: 70vw !important;
+        overflow: scroll;
+        font-size: 13;
+    }
+}

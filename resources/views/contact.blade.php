@@ -10,9 +10,8 @@
 @section('corpo')
             <section id='text'>
                 <div class="overlay"></div>
-                <h2><strong>Contact</strong></h2>
-
-                <p>michelelagreca.contact@gmail.com</p>
+                <p>Contact<br><br>
+                    michelelagreca.contact@gmail.com</p>
             </section>
 @stop
 

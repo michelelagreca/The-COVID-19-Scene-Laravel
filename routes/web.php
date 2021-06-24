@@ -18,9 +18,14 @@ Route::get('/', function () {
     return view('home');;
 })->name('home');
 
+Route::get('/home/news', 'HomeController@news')->name('newsHome');
+Route::get('/home/tweets', 'HomeController@tweets')->name('tweetsHome');
+
 Route::get('/news', function () {
     return view('news');
 })->name('news');
+
+Route::post('/news/getNews', 'NewsController@getNews')->name('getNews');
 
 Route::get('/people', function () {
 

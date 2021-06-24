@@ -7,7 +7,6 @@
 @endsection
 
 @section('script')
-    <script type="module" src="{{ asset('js/home.js') }}" defer></script>
     <script type="module" src="{{ asset('js/login_staff.js') }}" defer></script>
 @endsection
 

@@ -29,17 +29,14 @@ Route::get('/people', function () {
 Route::get('/access', 'LoginController@login')->name('access');
 Route::post('/login', 'LoginController@checkLogin')->name('login');
 Route::post('/signin', 'SigninController@signin')->name('signin');
-
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
 Route::get('/services', function () {
     return view('services');
 })->name('services');
 
-
-
-
-
+Route::post('/services/test', 'ServiceController@insertTest')->name('test');
+Route::post('/services/result', 'ServiceController@insertResult')->name('result');
 
 Route::get('/about', function () {
     return view('about');

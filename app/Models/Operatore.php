@@ -26,6 +26,9 @@ class Operatore extends Model
     public function staff(){
         return $this->hasOne("App\Models\Staff", "code", "username");
     }
+    public function tampone(){
+        return $this->hasMany("App\Models\Tampone", "operatore", "CF");
+    }
 }
 
 ?>

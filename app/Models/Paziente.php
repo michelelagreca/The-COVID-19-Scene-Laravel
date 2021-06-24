@@ -22,6 +22,9 @@ class Paziente extends Model
     public function persona(){
         return $this->belongsTo("Persona", "CF", "CF");
     }
+    public function tampone(){
+        return $this->hasMany("App\Models\Tampone", "paziente", "CF");
+    }
 }
 
 ?>

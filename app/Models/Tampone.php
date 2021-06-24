@@ -34,6 +34,9 @@ class Tampone extends Model
     public function caratteristiche(){
         return $this->belongsTo("App\Models\TamponeCaratteristiche", "Tipo_tampone", "Codice");
     }
+    public function esito(){
+        return $this->hasMany("App\Models\Esito", "Tampone", "Codice");
+    }
 
 }
 

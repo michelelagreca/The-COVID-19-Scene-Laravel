@@ -217,9 +217,14 @@ function validation_r (event) {
             Date:result.date.value,
             Res:result.res.value
         };
-        fetch("/The Covid-19 Scene/phps/services_result.php",{
+        fetch("/services/result",{
             method: 'POST',
-            body: JSON.stringify(data1)
+            body: JSON.stringify(data1),
+            headers: {
+                'Content-Type': 'application/json',
+                // "X-CSRF-Token": csrfToken,
+                'Accept': 'application/json'
+            }
         })
         .then(onResponse2).then(onJson_result);
     }

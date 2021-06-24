@@ -7,6 +7,8 @@
     use App\Models\Persona;
     use App\Models\Tampone;
     use App\Models\TamponeCaratteristiche;
+    use App\Models\Lab;
+    use App\Models\Esito;
 
     class ServiceController extends Controller{
         public function insertTest(Request $request){
@@ -79,7 +81,58 @@
         }
 
         public function insertResult(Request $request){
+            $output = array(
+                "lab" => "yes",
+                "id_2" => "yes",
+                "res" => "yes",
+                "data_yet" => "yes",
+                "data_same" => "yes"
+            );
+            $ID = Request::get('ID');
+            $type = Request::get('Type');
+            $lab = Request::get('Lab');
+            $date2 = Request::get('Date');
+            $res1 = Request::get('Res');
 
+            $laboratorio = Lab::where('codice', $lab)->first();
+            if(isset($laboratorio)){
+                $tampone = Tampone::where('Codice', $ID)->where('Tipo_tampone', $type)->first();
+                if(isset($tampone)){
+                    if((int)$res1 > 0 && (int)$res1 < 100){
+                        $tamponeData = Tampone::select('data_effettuazione')->where('Codice', $ID)->where('Tipo_tampone', $type)->get();
+                        $d = new DateTime($date2);
+                        $r = new DateTime($tamponeData[0]->data_effettuazione);
+                        if($d >= $r){
+                            $data_esito1 = Esito::where('Tampone', $ID)->where('data_e', $date2)->where('Tipo_tampone', $type)->first();
+                            if(isset($data_esito1)){
+                                $output['data_same'] = 'no';
+                            }
+                            else{
+                                Esito::create([
+                                    'Tampone' => $ID,
+                                    'Tipo_tampone' => $type,
+                                    'Lab_analisi' => $lab,
+                                    'data_e' => $date2,
+                                    'Risultato' => $res1
+                                ]);
+                            }
+                        }
+                        else{
+                            $output['data_yet'] = 'no';
+                        }
+                    }
+                    else{
+                        $output['res'] = 'no';
+                    }
+                }
+                else{
+                    $output['id_2'] = 'no';
+                }
+            }
+            else{
+                $output['lab'] = 'no';
+            }
+            return $output;
         }
     }
 ?>

@@ -4,7 +4,6 @@
 
 @section('style')
 <link rel="stylesheet" href="{{ asset('css/people.css') }}">
-<link rel="stylesheet" href="{{ asset('css/services.css') }}">
 @endsection
 
 @section('script')

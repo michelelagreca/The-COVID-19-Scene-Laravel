@@ -34,9 +34,9 @@ function validation2 (event) {
         field.addEventListener("click", return_normal);
         event.preventDefault();
     }
-    if(form_signin.username.value.length == 0){
+    if(form_signin.username2.value.length == 0){
         console.log("campo vuoto");
-        const field = document.querySelector("form[name=form_signin] input[name=username]");
+        const field = document.querySelector("form[name=form_signin] input[name=username2]");
         field.classList.add("error");
         field.addEventListener("click", return_normal);
         event.preventDefault();

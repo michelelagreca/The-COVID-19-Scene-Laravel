@@ -1,3 +1,6 @@
+#main{
+    display: block;
+}
 #services{
     display: flex;
     justify-content: space-around;
@@ -37,23 +40,45 @@ select {
 select option {
     background-color: var(--dark_gray);
 }
-input[type=date] {
-    width: 40%;
-    height: 50px;
-    margin: 5px;
+input{
     font-size: 14;
     font-family: 'Open Sans';
     letter-spacing: 3px;
     text-transform: uppercase;
-    background-color: black;
-    color: rgb(122, 122, 122);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
     outline: 0;
+    box-shadow: none;
     border: 0 !important;
+    background-color: black;
+    background-image: none;
+    color: white;
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
 }
-.form_cont form input[type=submit] {
+input[type=submit] {
+    width: 19%;
+    background-color: rgba(0, 0, 0, 0);
+}
+input[type=submit]:hover {
+    color: var(--orange);
+    background-color: var(--grey_hover);;
+}
+input[type=text], input[type=password] {
     width: 40%;
-    text-align: left;    
+    height: 50px;
+    margin: 5px;
 }
+input[type=date]{
+    width: 40%;
+    height: 50px;
+    margin: 5px;
+    color: rgb(122, 122, 122);
+}
+
 .errore_ins{
     display: block;
     font-size: 15;
@@ -78,10 +103,13 @@ input[type=date] {
         width: 80vw;
         align-items: center;
     }
-    input[type=date] {
+    input[type=submit], input[type=text], input[type=date] {
         width: 100%;
     }
     select{
         width: 100%;
+    }
+    h3{
+        text-align: center;
     }
 }

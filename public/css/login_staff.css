@@ -14,8 +14,9 @@
     background-repeat: no-repeat;
     
 }
-form[name=form_login] {
+form{
     width: 50%;
+    /* cisioaoidajdo */
     height: 20%;
     z-index: 0;
     display: flex;
@@ -23,8 +24,10 @@ form[name=form_login] {
     justify-content: center;
     align-items: center;
 }
-input[type=submit] {
-    width: 19%;
+form[name=form_signin] {
+    height: 50%;
+}
+input{
     font-size: 14;
     font-family: 'Open Sans';
     letter-spacing: 3px;
@@ -36,75 +39,31 @@ input[type=submit] {
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    background-color: var(--grey_nav);
+    background-color: black;
     background-image: none;
     color: white;
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease;
-    
+}
+input[type=submit] {
+    width: 19%;
+    background-color: rgba(0, 0, 0, 0);
 }
 input[type=submit]:hover {
     color: var(--orange);
     background-color: var(--grey_hover);;
 }
-input[type=text] {
-    width: 40%;
+input[type=text], input[type=password] {
+    width: 60%;
     height: 50px;
     margin: 5px;
-    font-size: 14;
-    font-family: 'Open Sans';
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    border: 0 !important;
-    background-color: black;
-    background-image: none;
-    color: white;
-    -webkit-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    transition: 0.3s all ease;
 }
-input[type=password] {
-    width: 40%;
-    height: 50px;
-    margin: 5px;
-    font-size: 14;
-    font-family: 'Open Sans';
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    border: 0 !important;
-    background-color: black;
-    background-image: none;
-    color: white;
-    -webkit-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    transition: 0.3s all ease;
-}
-h3{
+#login_section h3{
     z-index: 1;
     margin: 30px;
     font-weight: normal;
-}
-form[name=form_signin] {
-    width: 50%;
-    height: 50%;
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 .error {
     background-color: rgba(255, 0, 0, 0.39) !important;

@@ -1,9 +1,19 @@
 function onJson_check (json) {
     const obj = jQuery.parseJSON(JSON.stringify(json));
     console.log(obj);
-    if(obj['person']=='yes'){
+    if(document.querySelector('#tabella')!=null){
         const t = document.querySelector('#tabella');
         t.innerHTML='';
+    }
+    const res = document.querySelector("#check_person");
+    res.classList.add('hidden');
+    res.classList.remove('errore_ins');
+    if(document.querySelector('#specifier') != null){
+        const s = document.querySelector('#specifier');
+        s.innerHTML='';
+    }
+    if(obj['person']=='yes'){
+        const t = document.querySelector('#tabella');
         if(obj['dati'].length > 0){
             const res = document.querySelector("#check_person");
             res.classList.add('hidden');

@@ -105,7 +105,7 @@ function onClick(event){
     container.removeEventListener('click', onClick);
 }
 console.log("start");
-//fetch("/home/news").then(onResponse).then(onJson);
-//fetch("/home/tweets").then(onResponse_tw).then(onJson_tw);
+fetch("/home/news").then(onResponse).then(onJson);
+fetch("/home/tweets").then(onResponse_tw).then(onJson_tw);
 const container = document.querySelector('#container_lines');
 container.addEventListener('click', onClick);

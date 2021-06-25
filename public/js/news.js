@@ -1,6 +1,11 @@
 function onJson (json) {
     const obj = jQuery.parseJSON(JSON.stringify(json));
     console.log(obj);
+    if(document.querySelector("#form_news h3") != null){
+        const part = document.querySelector("#form_news");
+        const h = document.querySelector("#form_news h3");
+        part.removeChild(h);
+    }
     const notizie = document.querySelector("#result_news");
     notizie.innerHTML=""; /*i empty the news view because i want to upload fresh news each time*/
     notizie.classList.remove('hidden');
@@ -9,9 +14,10 @@ function onJson (json) {
         num_results=9;
     }
     if(num_results==0){
-        const h = document.createElement('h3');
-        h.textContent = 'Currently there are not news about this country.';
-        notizie.appendChild(h);
+        const part = document.querySelector("#form_news");
+        const h2 = document.createElement('h3');
+        h2.textContent = 'Currently there are not news about this country.';
+        part.appendChild(h2);
     }
     else{
         for(let i = 0; i < num_results; i++){

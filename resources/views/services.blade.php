@@ -3,8 +3,7 @@
 @section('titolo', 'Staff - Services')
 
 @section('style')
-<link rel="stylesheet" href="{{ asset('css/services.css') }}">
-<link rel="stylesheet" href="{{ asset('css/login_staff.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/services.css') }}">
 @endsection
 
 @section('script')

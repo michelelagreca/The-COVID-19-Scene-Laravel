@@ -12,12 +12,17 @@
                 if(!isset($staff_code)){
                     $staff = Staff::where('username', $request->username2)->first();
                     if(!isset($staff)){
-                        Staff::create([
-                            'code' => $request->code,
-                            'username' => $request->username2,
-                            'password' => $request->password
-                        ]);
-                        return redirect('access')->with('confirm', 'Staff registered');
+                        if($request->password == $request->password2){
+                            Staff::create([
+                                'code' => $request->code,
+                                'username' => $request->username2,
+                                'password' => $request->password
+                            ]);
+                            return redirect('access')->with('confirm', 'Staff registered');
+                        }
+                        else{
+                            return redirect('access')->withInput()->with('errore2', 'The passwords are not equals');
+                        }
                     }
                     else{
                         return redirect('access')->withInput()->with('errore2', 'Username already registered');

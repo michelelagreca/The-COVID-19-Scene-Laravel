@@ -48,6 +48,13 @@ function validation2 (event) {
         field.addEventListener("click", return_normal);
         event.preventDefault();
     }
+    if(form_signin.password2.value.length == 0){
+        console.log("campo vuoto");
+        const field = document.querySelector("form[name=form_signin] input[name=password2]");
+        field.classList.add("error");
+        field.addEventListener("click", return_normal);
+        event.preventDefault();
+    }
     else {
         console.log("submit..."); /* this is not showed because the page is reloaded if the code enters this else block*/
     }

@@ -38,6 +38,7 @@
                     <input type='text' placeholder='Institutional Code' name='code' value='{{ old("code") }}'>
                     <input type='text' placeholder='Username' name='username2' value='{{ old("username2") }}'>
                     <input type='password' placeholder='Password' name='password'>
+                    <input type='password' placeholder='Confirm password' name='password2'>
                     <input type="submit" name='sub' value='Sign In'>
                 </form>
             </section>

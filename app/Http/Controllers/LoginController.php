@@ -6,7 +6,7 @@
         public function login(){
             if(session('username') != null){
                 $username = session('username');
-                return view('services')->with('u', $username);
+                return redirect('services')->with('u', $username);
             }
             else{
                 $old_username = Request::old('username');
@@ -20,7 +20,7 @@
             if(isset($staff)){
                 Session::put('username', $staff->username);
                 $username = $staff->username;
-                return view('services', ['u' => $username]);
+                return redirect('services')->with('u', $username);
             }
             else{
                 return redirect('access')->withInput()->with('errore', 'Credentials are not correct');

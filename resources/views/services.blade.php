@@ -11,7 +11,7 @@
 @endsection
 
 @section('otherLinks')
-    <span id='currentsession'>{{ $u }}</span>
+    <span id='currentsession'>{{Session::get('u')}}</span>
     <a href='{{ route("logout") }}' id="logout">logout</a>
 @endsection
 

@@ -25,6 +25,7 @@
                     <h3 id='response' class='hidden'></h3>
                     <form name="tests" method='POST' action="">
                         @csrf
+                        <input name='_token' type='hidden' value="{{ csrf_token() }}">
                         <input type='text' placeholder='ID' name='ID'>
                         <select name="type">
                             <option selected disabled value="">Choose the type</option>
@@ -49,6 +50,7 @@
                     <h3 id='response_2' class='hidden'></h3>
                     <form name="results" method='POST' action="">
                         @csrf
+                        <input name='_token' type='hidden' value="{{ csrf_token() }}">
                         <input type='text' placeholder='ID' name='ID'>
                         <select name="type">
                             <option selected disabled value="">Choose the type</option>

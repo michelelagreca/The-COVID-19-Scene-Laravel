@@ -20,6 +20,7 @@
                     <h3 id="check_person" class="hidden"></h3>
                     <form name="info">
                         @csrf
+                        <input name='_token' type='hidden' value="{{ csrf_token() }}">
                         <input type='text' placeholder='ID' name='ID'>
                         <input type='text' placeholder='Name' name='name'>
                         <input type='text' placeholder='Surname' name='surname'>

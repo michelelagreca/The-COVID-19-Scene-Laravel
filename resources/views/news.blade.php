@@ -15,6 +15,7 @@
                 <div class="overlay"></div>
                 <form name="form_country">
                     @csrf
+                    <input name='_token' type='hidden' value="{{ csrf_token() }}">
                     <select name="country">
                         <option selected disabled value="">Choose the country </option>
                         <option value="ae">United Arab Emirates</option>

@@ -22,6 +22,7 @@
                 <div id="errore_log">{{Session::get('errore')}}</div>
                 <form name="form_login" method='POST' action="{{ route('login') }}">
                     @csrf
+                    <input name='_token' type='hidden' value="{{ csrf_token() }}">
                     <input type='text' placeholder='Username' name='username' value='{{ old("username") }}'>
                     <input type='password' placeholder='Password' name='password'>
                     <input type="submit" name='sub' value='Log In'>
@@ -33,6 +34,7 @@
                 <div class='no_errore'>{{Session::get('confirm')}}</div>
                 <form name="form_signin" method='POST' action="{{ route('signin') }}">
                     @csrf
+                    <input name='_token' type='hidden' value="{{ csrf_token() }}">
                     <input type='text' placeholder='Institutional Code' name='code' value='{{ old("code") }}'>
                     <input type='text' placeholder='Username' name='username2' value='{{ old("username2") }}'>
                     <input type='password' placeholder='Password' name='password'>

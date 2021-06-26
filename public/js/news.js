@@ -77,7 +77,7 @@ function validation (event) {
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json',
-                // "X-CSRF-Token": csrfToken,
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
                 'Accept': 'application/json'
             }
         })

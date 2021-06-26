@@ -1,5 +1,4 @@
 import "https://platform.twitter.com/widgets.js";
-import "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js";
 
 // loading page to let the tweets load
 function onReady(callback) {
@@ -88,24 +87,7 @@ function onJson (json) {
 function onResponse (response) {
     return response.json();
 }
-function onClick2(event){
-    const nav = document.querySelector('#nav_main');
-    nav.classList.remove('nav_appear');
-    nav.style.display = 'none';
-    // nav.classList.add('hidden');
-    const container = document.querySelector('#container_lines');
-    container.removeEventListener('click', onClick2);
-    container.addEventListener('click', onClick);
-}
-function onClick(event){
-    const nav = document.querySelector('#nav_main');
-    nav.classList.add('nav_appear');
-    const container = document.querySelector('#container_lines');
-    container.addEventListener('click', onClick2);
-    container.removeEventListener('click', onClick);
-}
+
 console.log("start");
 fetch("/home/news").then(onResponse).then(onJson);
 fetch("/home/tweets").then(onResponse_tw).then(onJson_tw);
-const container = document.querySelector('#container_lines');
-container.addEventListener('click', onClick);

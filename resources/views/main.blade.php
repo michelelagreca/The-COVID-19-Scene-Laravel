@@ -6,7 +6,7 @@
         <title>@yield('titolo')</title>
         <link rel="shortcut icon" type="png" href="{{ asset('images/logo4.png') }}" />
         <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-        <script type="module" src="{{ asset('js/home.js') }}" defer></script>
+        <script type="module" src="{{ asset('js/all.js') }}" defer></script>
         @yield('style')
         @yield('script')
         

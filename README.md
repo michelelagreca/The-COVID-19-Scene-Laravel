@@ -26,4 +26,4 @@ This page allow people to enter a name, surname, and ID and search for informati
 ## Access
 This page is a login / sign in page where staff and sanitary workers can register or access. A staff can access if it has a valid account already created. It is possible to register to this section by inserting an institutional code provided by the institution where a staff is working.
 ## Services
-After the login, a staff can execute some services inside the platform. He can insert a COVID-19 test, or a test result. The data will be saved in a relational database. It is possible to logout by clicking the extra button in the navigation bar
+After the login, a staff can execute some services inside the platform. He can insert a COVID-19 test, or a test result. The data will be saved in a relational database. It is possible to logout by clicking the extra button in the navigation bar.
